@@ -9,21 +9,21 @@ function processArray (array) {
     return array.map(number => number % 2 === 0 ? number ** 2: number *3)
 };
 
-const processedArray = processArray(inputArray);
+const newNumbersArray = processArray(inputArray);
 
-console.log(processedArray);
+console.log(newNumbersArray);
 
 
 //Task 2
 /* This task is to take in two arrays as arguments and then modifies the elemets in the stringArray based on
 the output we get in the processedArray. If even we capitalise, if odd we turn teh string into lowercase */
 
-function formatArrayStrings (stringArray, processedArray) {
+function formatArrayStrings (stringArray, newNumbersArray) {
     return stringArray.map((string, index) => {
-        const number = processedArray[index];
+        const number = newNumbersArray[index];
         return number % 2 === 0 ? string.toUpperCase() : string.toLowerCase();
     })
 }
 
-const formattedStrings = formatArrayStrings(stringArray, processedArray);
+const formattedStrings = formatArrayStrings(stringArray, newNumbersArray);
 console.log(formattedStrings);
