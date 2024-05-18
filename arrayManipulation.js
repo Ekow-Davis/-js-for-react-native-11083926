@@ -6,7 +6,7 @@ const inputArray = [42, 23, 37, 14, 45];
 const stringArray = ['Bat', 'Cat', 'HAT', 'Mat', 'Rat']
 
 function processArray (array) {
-    return array.map(number => number % 2 === 0 ? number ** 2: number *3)
+    return array.map(number => number % 2 === 0 ? number ** 2: number * 3)
 };
 
 const newNumbersArray = processArray(inputArray);
@@ -20,9 +20,9 @@ console.log("The modified Values: ", newNumbersArray);
 the output we get in the processedArray. If even we capitalise, if odd we turn teh string into lowercase */
 
 function formatArrayStrings (stringArray, newNumbersArray) {
-    return stringArray.map((string, index) => {
-        const number = newNumbersArray[index];
-        return number % 2 === 0 ? string.toUpperCase() : string.toLowerCase();
+    return stringArray.map((string, numbervalue) => {
+        const number = newNumbersArray[numbervalue];
+         number % 2 === 0 ? string.toUpperCase() : string.toLowerCase();
     })
 }
 
