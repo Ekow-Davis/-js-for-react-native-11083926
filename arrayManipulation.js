@@ -22,7 +22,7 @@ the output we get in the processedArray. If even we capitalise, if odd we turn t
 function formatArrayStrings (stringArray, newNumbersArray) {
     return stringArray.map((string, numbervalue) => {
         const number = newNumbersArray[numbervalue];
-         number % 2 === 0 ? string.toUpperCase() : string.toLowerCase();
+        return number % 2 === 0 ? string.toUpperCase() : string.toLowerCase();
     })
 }
 
